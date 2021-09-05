@@ -1,0 +1,83 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="css/bootstrap.min.css")
+        link(rel="stylesheet", href="icons/css/all.min.css")
+        link(rel="stylesheet", href="css/style.css")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    body
+        //start body-container
+        .body-container.txt-white
+            //start floating items
+            //start menu-section
+            mixin unorderList(icon)
+                ul
+                    -const listArr = ["home","about","projects","news"];
+                    -for (let i = 0; i < listArr.length; i++)
+                        li= listArr[i] 
+                            i(class=icon)
+                    li contact
+            mixin iconsList
+                .icons
+                    -const iconArr = ["fab fa-facebook-f","fab fa-twitter","fab fa-youtube","fab fa-instagram"];
+                    -for (let i = 0; i < iconArr.length; i++)
+                        a(href="#")
+                            i(class=iconArr[i])
+            .menu-section
+                .content
+                    +unorderList
+                    +iconsList
+            //end menu-section
+            //start menu-bar
+            .menu-bar
+                    .bar
+                    .bar
+                    .bar
+            //end menu-bar
+            //start nav bar
+            nav
+                a.page-icon(href="#")
+                            .txt
+                                h3 emoo
+                                p  Architecture studio 
+                            .bord
+                .container.list
+                    .row
+                        +unorderList("fas fa-chevron-down")
+                        +iconsList
+            //end nav bar
+            //start points
+            .point-container
+                ul
+                    li(data-section="home", class="active")
+                        i(class="fas fa-circle")
+                    -const disc = "fas fa-circle";
+                    -const sectionArr = ["services","works","reviews","team","news","contact"]
+                    -const discNums = sectionArr.length;
+                    -for (let i = 0; i < discNums; i++)
+                        li(data-section=sectionArr[i])
+                            i(class= disc)
+            //end points
+            //start bottom txt
+            .bot-txt
+                h3 © emoo 2021.
+            //end bottom txt
+            .lung-section
+                ul
+                    li.active eng
+                    li arb
+            //end floating items
+
+            //start parent-container
+            //end parent-container
+            .parent-container
+                include home.pug
+                include services.pug
+                include works.pug
+        //end body-container
+        //start script files
+        script(src="javascript/jquery-3.6.0.min.js")
+        script(src="javascript/slick.min.js")
+        script(src="javascript/rellax.min.js")
+        script(src="javascript/main.js", type="module")
+        //end script files

@@ -1,0 +1,28 @@
+{
+    "services-section":
+    [
+        {
+            "h2":"Architecture",
+            "p":"Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007",
+            "button":"learn more <i class='fas fa-chevron-right'></i>"
+        }
+        ,
+        {
+            "h2":"Interior",
+            "p":"Evening. Grass whales man isn't. Midst cattle form. Saw life winged a he behold isn't. Together can't Whose dominion after.",
+            "button":"learn more <i class='fas fa-chevron-right'></i>"
+        }
+        ,
+        {
+            "h2":"Landscape",
+            "p":"Man moveth second creepeth sixth fowl green to dry isn't him void fruitful divide. Be fish. They're you deep fowl which.",
+            "button":"learn more <i class='fas fa-chevron-right'></i>"
+        }
+        ,
+        {
+            "h2":"Building",
+            "p":"Founded in 2007, Sparch is specializing in providing innovative services such as websitFounded in 2007",
+            "button":"learn more <i class='fas fa-chevron-right'></i>"
+        }
+    ]
+}

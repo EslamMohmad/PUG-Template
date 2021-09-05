@@ -1,0 +1,39 @@
+@media (max-width:1050px) {
+    .menu-bar {
+        display: block;
+    }
+    nav {
+        .container,
+        .icons {
+            display: none;
+        }
+    }
+    .menu-section {
+        display: flex;
+    }
+}
+
+@media (max-width:578px) {
+    .menu-section {
+        .content {
+            ul {
+                li {
+                    display: block;
+                    text-align: center;
+                }
+                li:not(:last-child) {
+                    margin: 0 0 25px 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:370px) {
+    .point-container {
+        right: 30px;
+    }
+    .lung-section {
+        right: 30px;
+    }
+}

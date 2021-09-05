@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Gilroy","Arial",sans-serif;
+}
+
+$main-color:#ffb74d;
+$bg-main-color:#fcd54c;
+
+$gray-color:#fff;
+
+body {
+    overflow: hidden;
+}
+
+
+//switch between txt-color
+.body-container.txt-white {
+    position: relative;
+    nav {
+        .page-icon {
+            .txt h3, .txt p {
+                color: white;
+                transition: 0.2s ease-in-out color;
+            }
+        }
+        .container {
+            ul li {
+                color: white;
+                transition: 0.2s ease-in-out color;
+            }
+        }
+        .icons {
+            a{
+                color: white;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+    .point-container {
+        ul li {
+            color: white;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        li.active {
+            color:$main-color
+        }
+    }
+    .bot-txt {
+        h3 {
+            color:white;
+            transition: 0.2s ease-in-out color;
+        }
+    }
+    .lung-section {
+        ul li {
+            color: white;
+            transition: 0.2s ease-in-out color;
+        }
+        ul li.active {
+            color: $main-color;
+        }
+        ul li:hover {
+            color: $main-color;
+        }
+    }
+}
+.parent-container {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    .parent {
+        overflow: scroll;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-color: white;
+        .floting-txt {
+            position: absolute;
+            transform: rotate(-90deg) translateY(-50%);
+            left: 20px;
+            top:83%;
+            span {
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: lighter;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    @for $i from 6 through 0 {
+        .parent.z-#{$i} {
+            z-index: $i;
+        }
+    }
+}

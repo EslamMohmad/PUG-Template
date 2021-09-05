@@ -1,0 +1,38 @@
+@media (max-width:1245px) {
+    .home {
+        .container {
+            margin:0 15px 0 65px;
+            padding: 0;
+            max-width: 1140px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .home {
+        .row {
+            h1 {
+                font-size: 60px;
+            }
+            hr {
+                margin-top: 50px;
+            }
+        }
+    }
+    .parent-container .home.parent .floting-txt {
+        top:80%;
+    }
+}
+
+@media (max-width:485px) {
+    .home {
+        .row {
+            h1 {
+                font-size: 40px;
+            }
+            hr {
+                margin-top: 30px;
+            }
+        }
+    }
+}

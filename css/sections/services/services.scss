@@ -1,0 +1,94 @@
+$section-color:#fcd54c;
+.services {
+    .flex-box {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .txt {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                color: $section-color;
+                font-size: 160px;
+                font-weight: bolder;
+                position: relative; 
+                margin: 0 0 30px 0;
+                &::after {
+                    content: "+";
+                    position: absolute;
+                    top:0;
+                    right:0px;
+                    font-size: 80px;
+                    line-height: 0;
+                }
+            }
+            p {
+                font-weight: bolder;
+                word-break:keep-all;
+                text-transform: uppercase;
+                line-height: 2em;
+                font-size: 18px;
+                margin: 0;
+                width: 150px;
+            }
+        }
+        .content {
+            max-width: 70%;
+            h1 {
+                font-size: 50px;
+                font-weight: bolder;
+                padding:0 0 100px 0;
+                margin: 0;
+                span {
+                    color:$section-color
+                }
+            }
+            .bords {
+                display: flex;
+                flex-wrap: wrap;
+                .bord {
+                    width: 50%;
+                    padding:0 50px 0 0;
+                    margin-bottom: 40px;
+                    h2 {
+                        font-weight: bolder;
+                        font-size: 25px;
+                        margin-bottom: 30px;
+                    }
+                    p {
+                        color: gray;
+                        font-size: 16px;
+                        margin-bottom: 25px;
+                    }
+                    button {
+                        border: none;
+                        color: $section-color;
+                        font-weight: bolder;
+                        transition: 0.3s ease-in-out opacity;
+                        opacity: 0;
+                        i {
+                            margin-left: 10px;
+                            transition: 0.8s ease-in-out margin-left;
+                        }
+                        &:hover {
+                            color: $main-color;
+                        }
+                        &:hover i {
+                            margin-left: 20px;
+                        }
+                    }
+                    &:hover button {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .floting-txt {
+        color: black;
+    }
+}
+
+//import responsive file
+@import "servicesRes";
