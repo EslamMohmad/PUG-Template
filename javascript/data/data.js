@@ -13,7 +13,7 @@ function myData() {
                     <button>${servicesSec[i].button}</button>
                 </div>
                 `
-               $(".services.parent .content .bords").append(content)
+               $(".services.parent .content").append(content)
             }
         }
     }

@@ -1,92 +1,95 @@
 $section-color:#fcd54c;
-.services {
-    .flex-box {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        .txt {
-            width: auto;
+.parent-container {
+    .services {
+        display: block;
+        .scrollable {
+            width: 100%;
+            min-height: 100%;
+            overflow: hidden;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            h1 {
-                color: $section-color;
-                font-size: 160px;
-                font-weight: bolder;
-                position: relative; 
-                margin: 0 0 30px 0;
-                &::after {
-                    content: "+";
-                    position: absolute;
-                    top:0;
-                    right:0px;
-                    font-size: 80px;
-                    line-height: 0;
-                }
-            }
-            p {
-                font-weight: bolder;
-                word-break:keep-all;
-                text-transform: uppercase;
-                line-height: 2em;
-                font-size: 18px;
-                margin: 0;
-                width: 150px;
-            }
-        }
-        .content {
-            max-width: 70%;
-            h1 {
-                font-size: 50px;
-                font-weight: bolder;
-                padding:0 0 100px 0;
-                margin: 0;
-                span {
-                    color:$section-color
-                }
-            }
-            .bords {
-                display: flex;
-                flex-wrap: wrap;
-                .bord {
-                    width: 50%;
-                    padding:0 50px 0 0;
-                    margin-bottom: 40px;
-                    h2 {
-                        font-weight: bolder;
-                        font-size: 25px;
-                        margin-bottom: 30px;
+            align-items: center;
+            padding-top: 150px;
+            .row {
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                .txt {
+                    position: relative;
+                    h1 {
+                        font-size:150px;
+                        color:$section-color;
                     }
                     p {
-                        color: gray;
-                        font-size: 16px;
-                        margin-bottom: 25px;
-                    }
-                    button {
-                        border: none;
-                        color: $section-color;
                         font-weight: bolder;
-                        transition: 0.3s ease-in-out opacity;
-                        opacity: 0;
-                        i {
-                            margin-left: 10px;
-                            transition: 0.8s ease-in-out margin-left;
-                        }
-                        &:hover {
-                            color: $main-color;
-                        }
-                        &:hover i {
-                            margin-left: 20px;
-                        }
+                        text-transform:uppercase
                     }
-                    &:hover button {
-                        opacity: 1;
+                    &::after {
+                        content: "+";
+                        position: absolute;
+                        right:-30px;
+                        top:-80px;
+                        color:$section-color;
+                        font-size: 100px;
+                        font-weight: bolder
                     }
                 }
+                .flex-box {
+                    width: 70%;
+                    h1{
+                        font-size: 45px;
+                        font-weight:bolder;
+                        padding-bottom: 40px;
+                        span {
+                            color:$section-color
+                        }
+                    }
+                    .content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .bord {
+                            width: 50%;
+                            h2 {
+                                font-weight: bolder;
+                                font-size: 25px;
+                                margin-bottom: 30px
+                            }
+                            p {
+                                color: gray;
+                                margin-bottom: 25px;
+                                width: 80%
+                            }
+                            button {
+                                border:none;
+                                outline: none;
+                                color:$section-color;
+                                font-weight: bolder;
+                                text-transform: capitalize;
+                                opacity: 0;
+                                transition: 0.4s ease-in-out opacity;
+                                i {
+                                    transition: 0.3s ease-in-out transform;
+                                    margin-left: 5px;
+                                }
+                                &:hover {
+                                    color:$main-color;
+                                    i {
+                                        color: $section-color;
+                                        transform: translateX(5px);
+                                    }
+                                }
+                            }
+                            &:hover button {
+                                opacity: 1;
+                            }
+                        }
+                        .bord:nth-of-type(1),
+                        .bord:nth-of-type(2) {
+                            margin-bottom: 50px
+                        }
+                    }
+                }    
             }
         }
-    }
-    .floting-txt {
-        color: black;
     }
 }
 

@@ -10,6 +10,16 @@ body {
   overflow: hidden;
 }
 
+.body-container .menu-bar.active .bar {
+  background-color: white;
+}
+.body-container .menu-bar .bar {
+  background-color: black;
+}
+.body-container nav {
+  background-color: white;
+}
+
 .body-container.txt-white {
   position: relative;
 }
@@ -50,6 +60,12 @@ body {
 .body-container.txt-white .lung-section ul li:hover {
   color: #ffb74d;
 }
+.body-container.txt-white .menu-bar .bar {
+  background-color: white;
+}
+.body-container.txt-white nav {
+  background-color: transparent;
+}
 
 .parent-container {
   position: relative;
@@ -62,7 +78,7 @@ body {
   align-items: center;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-size: cover;
   background-color: white;
 }
@@ -70,34 +86,13 @@ body {
   position: absolute;
   transform: rotate(-90deg) translateY(-50%);
   left: 20px;
-  top: 83%;
+  top: 82%;
 }
 .parent-container .parent .floting-txt span {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: lighter;
   letter-spacing: 1px;
-}
-.parent-container .parent.z-6 {
-  z-index: 6;
-}
-.parent-container .parent.z-5 {
-  z-index: 5;
-}
-.parent-container .parent.z-4 {
-  z-index: 4;
-}
-.parent-container .parent.z-3 {
-  z-index: 3;
-}
-.parent-container .parent.z-2 {
-  z-index: 2;
-}
-.parent-container .parent.z-1 {
-  z-index: 1;
-}
-.parent-container .parent.z-0 {
-  z-index: 0;
 }
 
 .menu-section .content ul, nav .container.list .row ul {
@@ -129,6 +124,8 @@ nav {
   padding: 25px 50px;
   position: fixed;
   width: 100%;
+  background-color: transparent;
+  transition: 0.3s ease-in-out background-color;
 }
 nav .page-icon {
   position: relative;
@@ -193,6 +190,10 @@ nav .icons a:not(:last-child) {
 }
 nav .icons a:hover {
   color: #ffb74d;
+}
+
+nav.bg-active {
+  background-color: white;
 }
 
 .point-container {
@@ -354,7 +355,7 @@ nav .icons a:hover {
   width: 100%;
   height: 2px;
   background-color: white;
-  transition: 0.2s ease-in-out transform;
+  transition: 0.2s ease-in-out;
 }
 .menu-bar .bar:not(:last-child) {
   margin-bottom: 7px;
@@ -365,7 +366,8 @@ nav .icons a:hover {
 }
 .menu-bar .bar:nth-of-type(1),
 .menu-bar .bar:nth-of-type(3) {
-  transition: 0.3s ease-in-out transform;
+  transition: 0.3s ease-in-out;
+  transition-property: transform;
 }
 
 .menu-bar.active .bar:nth-of-type(2) {
@@ -373,9 +375,11 @@ nav .icons a:hover {
 }
 .menu-bar.active .bar:nth-of-type(1) {
   transform: rotate(40deg) translateX(5px) translateY(7.5px);
+  transition-property: transform, background-color;
 }
 .menu-bar.active .bar:nth-of-type(3) {
   transform: rotate(-40deg) translateX(5px) translateY(-7.5px);
+  transition-property: transform, background-color;
 }
 
 @media (max-width: 1050px) {
@@ -458,7 +462,7 @@ nav .icons {
   }
 
   .parent-container .home.parent .floting-txt {
-    top: 80%;
+    top: 78%;
   }
 }
 @media (max-width: 485px) {
@@ -468,114 +472,183 @@ nav .icons {
   .home .row hr {
     margin-top: 30px;
   }
+
+  .parent-container .home.parent .floting-txt span {
+    font-size: 11px;
+  }
 }
-.services .flex-box {
-  flex-wrap: nowrap;
-  justify-content: space-between;
+.parent-container .services {
+  display: block;
 }
-.services .flex-box .txt {
-  width: auto;
+.parent-container .services .scrollable {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding-top: 150px;
 }
-.services .flex-box .txt h1 {
-  color: #fcd54c;
-  font-size: 160px;
-  font-weight: bolder;
+.parent-container .services .scrollable .row {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.parent-container .services .scrollable .row .txt {
   position: relative;
-  margin: 0 0 30px 0;
 }
-.services .flex-box .txt h1::after {
+.parent-container .services .scrollable .row .txt h1 {
+  font-size: 150px;
+  color: #fcd54c;
+}
+.parent-container .services .scrollable .row .txt p {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.parent-container .services .scrollable .row .txt::after {
   content: "+";
   position: absolute;
-  top: 0;
-  right: 0px;
-  font-size: 80px;
-  line-height: 0;
-}
-.services .flex-box .txt p {
+  right: -30px;
+  top: -80px;
+  color: #fcd54c;
+  font-size: 100px;
   font-weight: bolder;
-  word-break: keep-all;
-  text-transform: uppercase;
-  line-height: 2em;
-  font-size: 18px;
-  margin: 0;
-  width: 150px;
 }
-.services .flex-box .content {
-  max-width: 70%;
+.parent-container .services .scrollable .row .flex-box {
+  width: 70%;
 }
-.services .flex-box .content h1 {
-  font-size: 50px;
+.parent-container .services .scrollable .row .flex-box h1 {
+  font-size: 45px;
   font-weight: bolder;
-  padding: 0 0 100px 0;
-  margin: 0;
+  padding-bottom: 40px;
 }
-.services .flex-box .content h1 span {
+.parent-container .services .scrollable .row .flex-box h1 span {
   color: #fcd54c;
 }
-.services .flex-box .content .bords {
+.parent-container .services .scrollable .row .flex-box .content {
   display: flex;
   flex-wrap: wrap;
 }
-.services .flex-box .content .bords .bord {
+.parent-container .services .scrollable .row .flex-box .content .bord {
   width: 50%;
-  padding: 0 50px 0 0;
-  margin-bottom: 40px;
 }
-.services .flex-box .content .bords .bord h2 {
+.parent-container .services .scrollable .row .flex-box .content .bord h2 {
   font-weight: bolder;
   font-size: 25px;
   margin-bottom: 30px;
 }
-.services .flex-box .content .bords .bord p {
+.parent-container .services .scrollable .row .flex-box .content .bord p {
   color: gray;
-  font-size: 16px;
   margin-bottom: 25px;
+  width: 80%;
 }
-.services .flex-box .content .bords .bord button {
+.parent-container .services .scrollable .row .flex-box .content .bord button {
   border: none;
+  outline: none;
   color: #fcd54c;
   font-weight: bolder;
-  transition: 0.3s ease-in-out opacity;
+  text-transform: capitalize;
   opacity: 0;
+  transition: 0.4s ease-in-out opacity;
 }
-.services .flex-box .content .bords .bord button i {
-  margin-left: 10px;
-  transition: 0.8s ease-in-out margin-left;
+.parent-container .services .scrollable .row .flex-box .content .bord button i {
+  transition: 0.3s ease-in-out transform;
+  margin-left: 5px;
 }
-.services .flex-box .content .bords .bord button:hover {
+.parent-container .services .scrollable .row .flex-box .content .bord button:hover {
   color: #ffb74d;
 }
-.services .flex-box .content .bords .bord button:hover i {
-  margin-left: 20px;
+.parent-container .services .scrollable .row .flex-box .content .bord button:hover i {
+  color: #fcd54c;
+  transform: translateX(5px);
 }
-.services .flex-box .content .bords .bord:hover button {
+.parent-container .services .scrollable .row .flex-box .content .bord:hover button {
   opacity: 1;
 }
-.services .floting-txt {
-  color: black;
+.parent-container .services .scrollable .row .flex-box .content .bord:nth-of-type(1),
+.parent-container .services .scrollable .row .flex-box .content .bord:nth-of-type(2) {
+  margin-bottom: 50px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .services .container {
     margin: 0 60px;
-    max-width: 1000px;
-  }
-  .services .container .flex-box .content h1 {
-    padding: 100px 0 50px 0;
-    font-size: 35px;
   }
 }
 @media (max-width: 992px) {
-  .services .container .flex-box .content .bords .bord {
+  .parent-container .services {
+    overflow: scroll;
+  }
+  .parent-container .services .scrollable .row .flex-box h1 {
+    font-size: 35px;
+  }
+  .parent-container .services .scrollable .row .flex-box .content {
+    flex-direction: column;
+  }
+  .parent-container .services .scrollable .row .flex-box .content .bord {
     width: 100%;
-    padding-right: 30px;
+  }
+  .parent-container .services .scrollable .row .flex-box .content .bord:nth-of-type(1), .parent-container .services .scrollable .row .flex-box .content .bord:nth-of-type(2) {
     margin: 0;
   }
-  .services .container .flex-box .content .bords .bord:not(:last-child) {
-    margin-bottom: 25px;
+  .parent-container .services .scrollable .row .flex-box .content .bord:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .parent-container .services .scrollable .row .flex-box .content .bord:last-child {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .parent-container .services {
+    overflow: scroll;
+  }
+  .parent-container .services .scrollable .row {
+    flex-direction: column;
+  }
+  .parent-container .services .scrollable .row .txt {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  .parent-container .services .scrollable .row .txt h1 {
+    font-size: 100px;
+  }
+  .parent-container .services .scrollable .row .txt p {
+    padding-top: 30px;
+    font-size: 15px;
+  }
+  .parent-container .services .scrollable .row .flex-box {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 578px) {
+  .parent-container .services .scrollable .row .txt {
+    margin: 0 auto;
+    width: 40%;
+    margin-bottom: 40px;
+  }
+  .parent-container .services .scrollable .row .txt h1 {
+    margin-right: 15px;
+  }
+  .parent-container .services .scrollable .row .flex-box {
+    margin: 0 0 0 10px;
+    width: 90%;
+  }
+  .parent-container .services .scrollable .row .flex-box h1 {
+    font-size: 25px;
+  }
+
+  .parent-container .parent.services .floting-txt {
+    top: 130%;
+  }
+}
+@media (max-width: 387px) {
+  .parent-container .services .scrollable .row .flex-box .content .bord p {
+    width: 100%;
+  }
+
+  .parent-container .parent.services .floting-txt {
+    top: 160%;
   }
 }
 .works .slider {

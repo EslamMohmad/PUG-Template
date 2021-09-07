@@ -1,13 +1,37 @@
-@media (max-width:1200px) {
+@media (max-width:1250px) {
     .services {
         .container {
             margin: 0 60px;
-            max-width: 1000px;
-            .flex-box {
-                .content {
-                    h1 {
-                        padding: 100px 0 50px 0;
-                        font-size: 35px;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .parent-container {
+        .services {
+            overflow: scroll;
+            .scrollable {
+                .row {
+                    .flex-box {
+                        h1 {
+                            font-size: 35px;
+                        }
+                        .content {
+                            flex-direction: column;
+                            .bord {
+                                width: 100%;
+                                &:nth-of-type(1),
+                                &:nth-of-type(2) {
+                                    margin: 0;
+                                }
+                                &:not(:last-child) {
+                                    margin-bottom: 20px;
+                                }
+                                &:last-child {
+                                    margin-bottom: 50px;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -15,23 +39,63 @@
     }
 }
 
-@media (max-width:992px) {
-    .services {
-        .container {
-            .flex-box {
-                .content {
-                    .bords {
-                        .bord {
-                            width: 100%;
-                            padding-right: 30px;
-                            margin: 0;
-                            &:not(:last-child) {
-                                margin-bottom: 25px;
-                            }
+@media (max-width:768px) {
+    .parent-container {
+        .services {
+            overflow: scroll;
+            .scrollable {
+                .row {
+                    flex-direction: column;
+                    .txt {
+                        display: flex;
+                        width: 30%;
+                        justify-content: space-around;
+                        margin-bottom: 30px;
+                        h1 {
+                            font-size: 100px;
                         }
+                        p {
+                            padding-top: 30px;
+                            font-size: 15px;
+                        }
+                    }
+                    .flex-box {
+                        margin: 0 auto;
                     }
                 }
             }
         }
+    }
+}
+
+@media (max-width:578px) {
+    .parent-container .services .scrollable .row {
+        .txt {
+            margin: 0 auto;
+            width: 40%;
+            margin-bottom: 40px;
+            h1 {
+                margin-right: 15px;
+            }
+        }
+        .flex-box {
+            margin:0 0 0 10px ;
+            width: 90%;
+            h1 {
+                font-size: 25px;
+            }
+        }
+    }
+    .parent-container .parent.services .floting-txt {
+        top:130%
+    }
+}
+
+@media (max-width:387px)  {
+    .parent-container .services .scrollable .row .flex-box .content .bord p {
+        width: 100%;
+    }
+    .parent-container .parent.services .floting-txt {
+        top:160%;
     }
 }
