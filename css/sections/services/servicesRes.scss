@@ -9,7 +9,7 @@
 @media (max-width:992px) {
     .parent-container {
         .services {
-            overflow: scroll;
+            overflow-y: scroll;
             .scrollable {
                 .row {
                     .flex-box {
@@ -40,9 +40,24 @@
 }
 
 @media (max-width:768px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #888;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: $main-color;
+        transition:  0.2s ease-in-out background-color;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: $section-color;
+      }
+      
     .parent-container {
         .services {
-            overflow: scroll;
             .scrollable {
                 .row {
                     flex-direction: column;
@@ -85,17 +100,5 @@
                 font-size: 25px;
             }
         }
-    }
-    .parent-container .parent.services .floting-txt {
-        top:130%
-    }
-}
-
-@media (max-width:387px)  {
-    .parent-container .services .scrollable .row .flex-box .content .bord p {
-        width: 100%;
-    }
-    .parent-container .parent.services .floting-txt {
-        top:160%;
     }
 }

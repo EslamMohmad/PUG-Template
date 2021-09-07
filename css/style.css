@@ -576,7 +576,7 @@ nav .icons {
 }
 @media (max-width: 992px) {
   .parent-container .services {
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .parent-container .services .scrollable .row .flex-box h1 {
     font-size: 35px;
@@ -598,9 +598,24 @@ nav .icons {
   }
 }
 @media (max-width: 768px) {
-  .parent-container .services {
-    overflow: scroll;
+  ::-webkit-scrollbar {
+    width: 10px;
   }
+
+  ::-webkit-scrollbar-track {
+    background-color: #888;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffb74d;
+    transition: 0.2s ease-in-out background-color;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #fcd54c;
+  }
+
   .parent-container .services .scrollable .row {
     flex-direction: column;
   }
@@ -636,19 +651,6 @@ nav .icons {
   }
   .parent-container .services .scrollable .row .flex-box h1 {
     font-size: 25px;
-  }
-
-  .parent-container .parent.services .floting-txt {
-    top: 130%;
-  }
-}
-@media (max-width: 387px) {
-  .parent-container .services .scrollable .row .flex-box .content .bord p {
-    width: 100%;
-  }
-
-  .parent-container .parent.services .floting-txt {
-    top: 160%;
   }
 }
 .works .slider {
