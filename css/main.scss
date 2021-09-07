@@ -12,9 +12,8 @@ $bg-main-color:#fcd54c;
 $gray-color:#fff;
 
 body {
-    overflow: hidden;
+    // overflow: hidden;
 }
-
 
 //switch between txt-color
 .body-container {
@@ -126,4 +125,19 @@ body {
     //         z-index: $i;
     //     }
     // }
+}
+.slick-list {
+    height: 100%;
+    width: 100%;
+    .slick-track {
+        display: flex;
+        height: 100%;
+    }
+}
+@media (max-width:1250px) {
+    .parent {
+        .container {
+            margin: 0 60px;
+        }
+    }
 }

@@ -6,10 +6,6 @@
   font-family: "Gilroy", "Arial", sans-serif;
 }
 
-body {
-  overflow: hidden;
-}
-
 .body-container .menu-bar.active .bar {
   background-color: white;
 }
@@ -95,6 +91,20 @@ body {
   letter-spacing: 1px;
 }
 
+.slick-list {
+  height: 100%;
+  width: 100%;
+}
+.slick-list .slick-track {
+  display: flex;
+  height: 100%;
+}
+
+@media (max-width: 1250px) {
+  .parent .container {
+    margin: 0 60px;
+  }
+}
 .menu-section .content ul, nav .container.list .row ul {
   margin: 0;
 }
@@ -569,11 +579,6 @@ nav .icons {
   margin-bottom: 50px;
 }
 
-@media (max-width: 1250px) {
-  .services .container {
-    margin: 0 60px;
-  }
-}
 @media (max-width: 992px) {
   .parent-container .services {
     overflow-y: scroll;
@@ -658,52 +663,47 @@ nav .icons {
   width: 100%;
   overflow: hidden;
 }
-.works .slider .slick-list {
-  height: 100%;
-}
-.works .slider .slick-list .slick-track {
-  display: flex;
-  height: 100%;
-}
-.works .slider .slick-list .slick-track .bord {
+.works .slider .bord {
   background-size: cover;
   background-position: bottom;
   width: 100%;
   height: 100%;
 }
-.works .slider .slick-list .slick-track .bord:active {
+.works .slider .bord:active {
   cursor: grabbing;
 }
-.works .slider .slick-list .slick-track .bord.slide0 {
+.works .slider .bord.slide0 {
   background-image: url(../../../images/works-0.jpg);
 }
-.works .slider .slick-list .slick-track .container {
+.works .slider .container {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
-.works .slider .slick-list .slick-track .container .row {
+.works .slider .container .row {
   position: relative;
   color: white;
   flex-direction: column;
+  width: 100%;
 }
-.works .slider .slick-list .slick-track .container .row h3 {
+.works .slider .container .row h3 {
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 50px;
 }
-.works .slider .slick-list .slick-track .container .row h1 {
+.works .slider .container .row h1 {
   font-size: 80px;
   font-weight: bolder;
   margin-bottom: 50px;
 }
-.works .slider .slick-list .slick-track .container .row p {
+.works .slider .container .row p {
   width: 35%;
   color: lightgray;
   line-height: 2em;
   margin-bottom: 40px;
 }
-.works .slider .slick-list .slick-track .container .row .project {
+.works .slider .container .row .project {
   padding: 15px 20px;
   width: 180px;
   border: none;
@@ -715,47 +715,50 @@ nav .icons {
   text-transform: uppercase;
   transition: 0.2s ease-in-out background-color;
 }
-.works .slider .slick-list .slick-track .container .row .project:hover {
+.works .slider .container .row .project:hover {
   background-color: #fcd54c;
 }
-.works .slider .slick-list .slick-track .container .row span {
+.works .slider .container .row span {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 50px;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: bolder;
+  text-align: right;
 }
-.works .slider .slick-list .slick-track .bord.slide1 {
+.works .slider .bord.slide1 {
   background-image: url(../../../images/works-1.jpg);
 }
-.works .slider .slick-list .slick-track .container {
+.works .slider .container {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
-.works .slider .slick-list .slick-track .container .row {
+.works .slider .container .row {
   position: relative;
   color: white;
   flex-direction: column;
+  width: 100%;
 }
-.works .slider .slick-list .slick-track .container .row h3 {
+.works .slider .container .row h3 {
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 50px;
 }
-.works .slider .slick-list .slick-track .container .row h1 {
+.works .slider .container .row h1 {
   font-size: 80px;
   font-weight: bolder;
   margin-bottom: 50px;
 }
-.works .slider .slick-list .slick-track .container .row p {
+.works .slider .container .row p {
   width: 35%;
   color: lightgray;
   line-height: 2em;
   margin-bottom: 40px;
 }
-.works .slider .slick-list .slick-track .container .row .project {
+.works .slider .container .row .project {
   padding: 15px 20px;
   width: 180px;
   border: none;
@@ -767,47 +770,50 @@ nav .icons {
   text-transform: uppercase;
   transition: 0.2s ease-in-out background-color;
 }
-.works .slider .slick-list .slick-track .container .row .project:hover {
+.works .slider .container .row .project:hover {
   background-color: #fcd54c;
 }
-.works .slider .slick-list .slick-track .container .row span {
+.works .slider .container .row span {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 50px;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: bolder;
+  text-align: right;
 }
-.works .slider .slick-list .slick-track .bord.slide2 {
+.works .slider .bord.slide2 {
   background-image: url(../../../images/works-2.jpg);
 }
-.works .slider .slick-list .slick-track .container {
+.works .slider .container {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
-.works .slider .slick-list .slick-track .container .row {
+.works .slider .container .row {
   position: relative;
   color: white;
   flex-direction: column;
+  width: 100%;
 }
-.works .slider .slick-list .slick-track .container .row h3 {
+.works .slider .container .row h3 {
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 50px;
 }
-.works .slider .slick-list .slick-track .container .row h1 {
+.works .slider .container .row h1 {
   font-size: 80px;
   font-weight: bolder;
   margin-bottom: 50px;
 }
-.works .slider .slick-list .slick-track .container .row p {
+.works .slider .container .row p {
   width: 35%;
   color: lightgray;
   line-height: 2em;
   margin-bottom: 40px;
 }
-.works .slider .slick-list .slick-track .container .row .project {
+.works .slider .container .row .project {
   padding: 15px 20px;
   width: 180px;
   border: none;
@@ -819,21 +825,21 @@ nav .icons {
   text-transform: uppercase;
   transition: 0.2s ease-in-out background-color;
 }
-.works .slider .slick-list .slick-track .container .row .project:hover {
+.works .slider .container .row .project:hover {
   background-color: #fcd54c;
 }
-.works .slider .slick-list .slick-track .container .row span {
+.works .slider .container .row span {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 50px;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: bolder;
+  text-align: right;
 }
 .works .slider .slick-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 100px;
   font-size: 50px;
   cursor: pointer;
   z-index: 2;
@@ -844,10 +850,115 @@ nav .icons {
   color: #ffb74d;
 }
 .works .slider .slick-next {
-  right: 200px;
+  right: 15%;
 }
 .works .slider .slick-prev {
-  left: 200px;
+  right: 30%;
+}
+
+@media (max-width: 992px) {
+  .works .slider .slick-list .slick-track .container .row h3 {
+    font-size: 30px;
+  }
+  .works .slider .slick-list .slick-track .container .row h1 {
+    font-size: 60px;
+  }
+  .works .slider .slick-list .slick-track .container .row h3, .works .slider .slick-list .slick-track .container .row h1, .works .slider .slick-list .slick-track .container .row p, .works .slider .slick-list .slick-track .container .row button {
+    margin-bottom: 20px;
+  }
+  .works .slider .slick-list .slick-track .container .row span {
+    right: 0;
+  }
+  .works .slider .slick-list .slick-track .container .row p {
+    width: 50%;
+    line-height: 1.5em;
+  }
+}
+@media (max-width: 768px) {
+  .works .slider .slick-list .slick-track .container .row span {
+    position: static;
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .works .slider .slick-list .slick-track .container .row span br {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .works .slider .slick-list .slick-track .container .row h3 {
+    font-size: 18px;
+  }
+  .works .slider .slick-list .slick-track .container .row h1 {
+    font-size: 35px;
+  }
+  .works .slider .slick-list .slick-track .container .row h3, .works .slider .slick-list .slick-track .container .row h1, .works .slider .slick-list .slick-track .container .row p, .works .slider .slick-list .slick-track .container .row button {
+    margin-bottom: 15px;
+  }
+  .works .slider .slick-list .slick-track .container .row p {
+    width: 60%;
+    font-size: 13px;
+  }
+  .works .slider .slick-list .slick-track .container .row .project {
+    width: 150px;
+    font-size: 13px;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    padding: 10px 15px;
+  }
+  .works .slider .slick-list .slick-track .container .row span {
+    font-size: 15px;
+  }
+
+  .works .slider .slick-arrow {
+    font-size: 30px;
+  }
+}
+.reviews .container .row {
+  position: relative;
+  width: 100%;
+}
+.reviews .container .row h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  text-transform: capitalize;
+  margin-bottom: 80px;
+}
+.reviews .container .row .slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.reviews .container .row .slider .bord {
+  width: 50%;
+  border: 4px solid #ffb74d;
+  position: relative;
+  padding: 80px 40px 40px 40px;
+}
+.reviews .container .row .slider .bord img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+}
+.reviews .container .row .slider .bord .comma {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-image: url(../../../images/floating-SVG.svg);
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+.reviews .container .row .slider .bord h3 {
+  font-weight: bolder;
+  font-size: 23px;
+}
+.reviews .container .row .slider .bord span {
+  color: #ffb74d;
+  margin: 10px 0;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+.reviews {
+    .container {
+        .row {
+            position: relative;
+            width: 100%;
+            h1 {
+                font-size: 50px;
+                font-weight: bolder;
+                text-transform: capitalize;
+                margin-bottom: 80px;
+            }
+            .slider {
+                display: flex;
+                overflow: hidden;
+                position: relative;
+                .bord {
+                    width: 50%;
+                    border:4px solid $main-color;
+                    position: relative;
+                    padding: 80px 40px 40px 40px;
+                    img {
+                        width: 110px;
+                        height: 110px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top:-50px
+                    }
+                    .comma {
+                        position: absolute;
+                        right:30px;
+                        top:30px;
+                        background-image: url(../../../images/floating-SVG.svg);
+                        background-repeat: no-repeat;
+                        width: 50px;
+                        height: 50px;
+                    }
+                    h3 {
+                        font-weight: bolder;
+                        font-size: 23px;
+                    }
+                    span {
+                        color: $main-color;
+                        margin: 10px 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

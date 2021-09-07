@@ -25,12 +25,19 @@ $(window).on("scroll", function () {
 //import data file
 import myData from "./data/data.js"
 
-//use slider effect
+//use slider effect (works section)
 $(".works.parent .slider").slick({
     infinite:true,
     appendArrows:$(".works.parent .slider"),
     nextArrow:`<i class="slick-arrow slick-next fas fa-chevron-right"></i>`,
     prevArrow:`<i class="slick-arrow slick-prev fas fa-chevron-left"></i>`
+})
+
+//use slider effect (reviews section)
+$(".reviews.parent .slider").slick({
+    arrows:false,
+    slidesToShow:2,
+    infinite:false
 })
 
 //menu-bar

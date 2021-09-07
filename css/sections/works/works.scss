@@ -3,11 +3,11 @@
         height: 100vh;
         width: 100%;
         overflow: hidden;
-        .slick-list {
-            height: 100%;
-            .slick-track {
-                display: flex;
-                height: 100%;
+        // .slick-list {
+        //     height: 100%;
+        //     .slick-track {
+        //         display: flex;
+        //         height: 100%;
                 .bord {
                     background-size: cover;
                     background-position: bottom;
@@ -25,10 +25,12 @@
                         height: 100%;
                         display: flex;
                         align-items: center;
+                        justify-content: flex-start;
                         .row {
                             position: relative;
                             color: white;
                             flex-direction: column;
+                            width: 100%;
                             h3 {
                                 text-transform: uppercase;
                                 font-weight: bolder;
@@ -63,21 +65,21 @@
                             span {
                                 position: absolute;
                                 top:0;
-                                right: 0;
+                                right: 50px;
                                 font-size: 22px;
                                 text-transform: uppercase;
                                 font-weight: bolder;
+                                text-align:right;
                             }
                             
                         }
                     }
                 }
-            }
-        }
+        //     }
+        // }
         .slick-arrow {
             position: absolute;
-            top:50%;
-            transform: translateY(-50%);
+            bottom:100px;
             font-size: 50px;
             cursor: pointer;
             z-index: 2;
@@ -88,10 +90,13 @@
             }
         }
         .slick-next {
-            right: 200px;
+            right: 15%;
         }
         .slick-prev {
-            left: 200px
+            right: 30%
         }
     }
 }
+
+//import responsive file
+@import "worksRes";

@@ -1,0 +1,18 @@
+.reviews.parent.z-3.txt-black#reviews
+    .floting-txt 
+        span reviews
+    .container
+        .row
+            h1 testimonials
+            .slider
+                -const names = ["paul","robert","john","marcous"]
+                -const para = " Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&B, education, communication.";
+                -for (let i = 1; i <= 4; i++)
+                    .bord
+                        img(src=`images/avatar-${i}.png`)
+                        .comma
+                        h3= names[i-1]
+                        span desginer in apple inc.
+                        p= para
+                        
+    
