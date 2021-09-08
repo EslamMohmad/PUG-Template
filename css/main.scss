@@ -12,7 +12,7 @@ $bg-main-color:#fcd54c;
 $gray-color:#fff;
 
 body {
-    // overflow: hidden;
+    overflow: hidden;
 }
 
 //switch between txt-color
@@ -132,6 +132,30 @@ body {
     .slick-track {
         display: flex;
         height: 100%;
+    }
+}
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    li {
+        list-style: none;
+        width:13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: lightgray;
+        cursor: pointer;
+        transition: 0.2s ease-in-out background-color;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        button {
+            display: none;
+        }
+    }
+    li.slick-active {
+        background-color: $main-color;
     }
 }
 @media (max-width:1250px) {

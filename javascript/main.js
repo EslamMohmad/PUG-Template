@@ -37,7 +37,17 @@ $(".works.parent .slider").slick({
 $(".reviews.parent .slider").slick({
     arrows:false,
     slidesToShow:2,
-    infinite:false
+    infinite:false,
+    slideToScroll:1,
+    dots:true,
+    responsive: [
+        {
+            breakpoint:768,
+            settings: {
+                slidesToShow:1
+            }
+        }
+    ]
 })
 
 //menu-bar

@@ -1,0 +1,31 @@
+@media (max-width:643px) {
+    .reviews .container {
+        .row {
+            margin: 0;
+            h1 {
+                font-size: 30px;
+                margin:20px 60px;
+            }
+            .slider {
+               margin: 0 60px;
+               .bord {
+                   padding: 60px 25px 25px 25px;
+                   img {
+                       width: 70px;
+                       height: 70px;
+                       top:-40px
+                   }
+                   .comma {
+                       width: 25px;
+                       height: 25px;
+                       top:15px;
+                       right: 15px;
+                   }
+                   p {
+                       font-size: 13px;
+                   }
+               }
+            }
+        }
+    }
+}
