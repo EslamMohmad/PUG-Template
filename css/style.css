@@ -702,7 +702,7 @@ nav .icons {
   cursor: grabbing;
 }
 .works .slider .bord.slide0 {
-  background-image: url(../../../images/works-0.jpg);
+  background-image: url(../images/works-0.jpg);
 }
 .works .slider .container {
   height: 100%;
@@ -757,7 +757,7 @@ nav .icons {
   text-align: right;
 }
 .works .slider .bord.slide1 {
-  background-image: url(../../../images/works-1.jpg);
+  background-image: url(../images/works-1.jpg);
 }
 .works .slider .container {
   height: 100%;
@@ -812,7 +812,7 @@ nav .icons {
   text-align: right;
 }
 .works .slider .bord.slide2 {
-  background-image: url(../../../images/works-2.jpg);
+  background-image: url(../images/works-2.jpg);
 }
 .works .slider .container {
   height: 100%;

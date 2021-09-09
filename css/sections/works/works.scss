@@ -19,7 +19,7 @@
                 }
                 @for $i from 0 through  2 {
                     .bord.slide#{$i} {
-                        background-image: url(../../../images/works-#{$i}.jpg);
+                        background-image: url(../images/works-#{$i}.jpg);
                     }
                     .container {
                         height: 100%;
