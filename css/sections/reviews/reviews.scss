@@ -9,7 +9,7 @@
                 text-transform: capitalize;
                 margin-bottom: 80px;
             }
-            .slider {
+            .slide {
                 display: flex;
                 overflow: hidden;
                 position: relative;
@@ -31,7 +31,7 @@
                         position: absolute;
                         right:30px;
                         top:30px;
-                        background-image: url(../../../images/floating-SVG.svg);
+                        background-image: url(../images/floating-SVG.svg);
                         background-repeat: no-repeat;
                         width: 50px;
                         height: 50px;

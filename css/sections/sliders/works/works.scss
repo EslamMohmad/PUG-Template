@@ -1,0 +1,49 @@
+.works{  
+    @for $i from 0 through  2 {
+    .bord.slide#{$i} {
+        background-image: url(../images/works-#{$i}.jpg);
+    }
+        .project {
+            padding: 15px 20px;
+            width: 180px;
+            border:none;
+            outline:none;
+            background-color: $main-color;
+            font-weight: bold;
+            font-size: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.2s ease-in-out background-color;
+            &:hover {
+                background-color:$bg-main-color
+            }
+        }
+        span {
+            position: absolute;
+            top:0;
+            right: 50px;
+            font-size: 22px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            text-align:right;
+        }
+        .slick-arrow {
+            position: absolute;
+            bottom:125px;
+            font-size: 50px;
+            cursor: pointer;
+            z-index: 2;
+            color: white;
+            transition: 0.2s ease-in-out color;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        .slick-next {
+            right: 15%;
+        }
+        .slick-prev {
+            right: 30%
+        }
+    }
+}

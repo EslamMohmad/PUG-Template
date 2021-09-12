@@ -1,0 +1,42 @@
+.team {
+    @for $i from 0 through 2 {
+        .bord.slide-#{$i} {
+            background-image: url(../images/team-#{$i}.jpg);
+        }
+    }
+    ul {
+        margin: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            cursor: pointer;
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+            &:hover i {
+                color: $main-color;
+            }
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        bottom:125px;
+        font-size: 50px;
+        cursor: pointer;
+        z-index: 2;
+        color: white;
+        transition: 0.2s ease-in-out color;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    .slick-next {
+        right: 15%;
+    }
+    .slick-prev {
+        right: 30%
+    }
+}
+
+//import resposive file
+@import "../slidersRes";

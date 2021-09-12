@@ -1,0 +1,19 @@
+.team.parent.z-2.txt-white#team
+    .slider
+        -const teamNames = ["jonny <span class='small'>/ architect</span>","amanda <span class='small'>/ desginer</span>","samuel <span class='small'>/ desginer</span>"];
+        -const teamTxt = " Projects for many large domestic and foeign corporations, enterprises in many elds such as nance, banking, F&B, education, communication. ";
+        -const teamIcons = ["facebook-f","twitter","youtube"];
+        -for (let i = 0; i < teamNames.length; i++) 
+            .bord(class="slide-"+ i + "")
+                .container
+                    .row
+                        h3 best team
+                        h1!= teamNames[i]
+                        p= teamTxt
+                        ul
+                            -for (let l = 0; l < teamIcons.length; l++)
+                                li 
+                                    i(class="fab fa-" + teamIcons[l])
+
+                        
+

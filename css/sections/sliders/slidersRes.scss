@@ -1,5 +1,15 @@
+@media (max-width:1200px) {
+    .team .bord.slide-0 {
+        background-position: right;
+    }
+    .team .bord.slide-1,
+    .team .bord.slide-2{
+        background-position: center;
+    }
+}
+
 @media (max-width:992px){
-    .works .slider .slick-list .slick-track .container .row {
+    .slider .slick-list .slick-track .container .row {
         h3 {
             font-size: 30px;
         }
@@ -20,7 +30,7 @@
 }
 
 @media (max-width:768px) {
-    .works .slider .slick-list .slick-track .container .row {
+    .slider .slick-list .slick-track .container .row {
         span {
             position: static;
             text-align: left;
@@ -34,7 +44,10 @@
 }
 
 @media (max-width:576px) {
-    .works .slider .slick-list .slick-track .container .row {
+    .team .bord.slide-0 {
+        background-position: 80%;
+    }
+    .slider .slick-list .slick-track .container .row {
         h3 {
             font-size: 18px;
         }
@@ -42,7 +55,7 @@
             font-size:35px;
         }
         h3 ,h1, p, button {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         p {
             width: 60%;
@@ -58,8 +71,16 @@
         span {
             font-size: 15px;
         }
+        .slick-arrow {
+            font-size: 30px;
+        }
     }
-    .works .slider .slick-arrow {
-        font-size: 30px;
+    .parent {
+        .slick-arrow {
+            font-size: 30px;
+        }
+    }
+    .parent-container .parent .slider .container .row h1 .small {
+        font-size: 15px;
     }
 }
