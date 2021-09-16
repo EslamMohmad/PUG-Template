@@ -8,7 +8,6 @@
 
 $main-color:#ffb74d;
 $bg-main-color:#fcd54c;
-
 $gray-color:#fff;
 
 body {
@@ -120,6 +119,15 @@ body {
                 letter-spacing: 1px;
             }
         }
+        .scrollable {
+            width: 100%;
+            min-height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 150px;
+        }
         .slider {
             height: 100%;
             width: 100%;
@@ -209,6 +217,31 @@ body {
     .parent {
         .container {
             margin: 0 60px;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #888;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: $main-color;
+        transition:  0.2s ease-in-out background-color;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: $bg-main-color;
+      }
+      
+    .parent-container {
+        .scroll {
+            overflow-y: scroll;
+            display: block;
         }
     }
 }

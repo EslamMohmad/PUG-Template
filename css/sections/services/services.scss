@@ -1,15 +1,6 @@
-$section-color:#fcd54c;
 .parent-container {
     .services {
-        display: block;
         .scrollable {
-            width: 100%;
-            min-height: 100%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 150px;
             .row {
                 justify-content: space-between;
                 flex-wrap: nowrap;
@@ -17,7 +8,7 @@ $section-color:#fcd54c;
                     position: relative;
                     h1 {
                         font-size:150px;
-                        color:$section-color;
+                        color:$bg-main-color;
                     }
                     p {
                         font-weight: bolder;
@@ -28,7 +19,7 @@ $section-color:#fcd54c;
                         position: absolute;
                         right:-30px;
                         top:-80px;
-                        color:$section-color;
+                        color:$bg-main-color;
                         font-size: 100px;
                         font-weight: bolder
                     }
@@ -40,7 +31,7 @@ $section-color:#fcd54c;
                         font-weight:bolder;
                         padding-bottom: 40px;
                         span {
-                            color:$section-color
+                            color:$bg-main-color
                         }
                     }
                     .content {
@@ -61,7 +52,7 @@ $section-color:#fcd54c;
                             button {
                                 border:none;
                                 outline: none;
-                                color:$section-color;
+                                color:$bg-main-color;
                                 font-weight: bolder;
                                 text-transform: capitalize;
                                 opacity: 0;
@@ -73,7 +64,7 @@ $section-color:#fcd54c;
                                 &:hover {
                                     color:$main-color;
                                     i {
-                                        color: $section-color;
+                                        color: $bg-main-color;
                                         transform: translateX(5px);
                                     }
                                 }

@@ -1,0 +1,23 @@
+.news.parent.z-1.txt-black.scroll#news
+    .floting-txt
+        span news
+    .scrollable
+        .container
+            .row
+                .top
+                    h1 last news
+                    button Veiw all news
+                        i(class="fas fa-chevron-right")
+                .foot
+                    -const heading = ["Geometric Square Villa In Germany","Redesign Exterior Of EMME Officie","House Near London"];
+                    -const newsTxt = "To mark the first UK show of artist Henri Barande My job is simple and sophisticated, so it…";
+                    -for (let i = 0; i < heading.length; i++)
+                        .bord
+                            div(class="img bg-"+ i)
+                            .txt
+                                span August 1, 2021
+                                h1= heading[i]
+                                p= newsTxt
+                                button Learn more
+                                    i(class="fas fa-chevron-right")
+                            
