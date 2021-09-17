@@ -1,30 +1,16 @@
+//start works section
 .works.parent.z-4.txt-white#works
     .slider
-        .bord.slide0
             -const txt = "Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&B, education, communication.";
-            .container
-                .row
-                    h3 featcred works
-                    h1 interior <br/> in moscow 
-                    p #{txt}
-                    button.project see project
-                    span Jan 2021 <br/> Design 
-
-        .bord.slide1
-            .container
-                .row
-                    h3 featcred works
-                    h1 rennovate <br/> in denmrak 
-                    p #{txt}
-                    button.project see project
-                    span feb 2021 <br/> interior 
-
-        .bord.slide2
-            .container
-                .row
-                    h3 featcred works
-                    h1 spain <br/> interior 
-                    p #{txt}
-                    button.project see project
-                    span may 2021 <br/> branding 
-
+            -const headingWorks = ["interior <br/> in moscow", "rennovate <br/> in denmrak", "spain <br/> interior"];
+            -const dataWorks = ["Jan 2021 <br/> Design", "feb 2021 <br/> interior", "may 2021 <br/> branding"];
+            -for (let i = 0; i < headingWorks.length; i++)
+                .bord(class="slide" + i)
+                    .container
+                        .row
+                            h3 featcred works
+                            h1!= headingWorks[i]
+                            p= txt
+                            button.project see project
+                            span!= dataWorks[i]
+//end works section

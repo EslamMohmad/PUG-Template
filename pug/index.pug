@@ -52,7 +52,7 @@ html
                     li(data-section="home", class="active")
                         i(class="fas fa-circle")
                     -const disc = "fas fa-circle";
-                    -const sectionArr = ["services","works","reviews","team","news","contact"]
+                    -const sectionArr = ["services","works","reviews","team","news","contacts"]
                     -const discNums = sectionArr.length;
                     -for (let i = 0; i < discNums; i++)
                         li(data-section=sectionArr[i])
@@ -75,6 +75,7 @@ html
                 include reviews.pug
                 include team.pug
                 include news.pug
+                include contacts.pug
             //end parent-container
         //end body-container
         //start script files

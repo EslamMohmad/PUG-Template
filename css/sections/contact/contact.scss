@@ -1,0 +1,100 @@
+.contacts {
+    background-image: url(../images/works-0.jpg);
+    color: white;
+    .scrollable {
+        .row {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            .bord {
+                width: (100% / 2) - 2;
+            }
+            .one {
+                h1 {
+                    font-size: 90px;
+                    font-weight: bolder;
+                    margin-bottom: 30px;
+                }
+                p,h3,a {
+                    margin-bottom: 40px;
+                }
+                p {
+                    color: $light-gray;
+                }
+                h3 {
+                    font-weight: bolder;
+                    font-size: 33px;
+                }
+                a[link="first"] {
+                    font-weight: bolder;
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                }
+                a[link="last"] {
+                    color: $light-gray;
+                    margin-bottom: 0;
+                }
+                a {
+                    color: white;
+                    text-decoration: none;
+                    display: block;
+                    transition: 0.2s ease-in-out color;
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+            .two {
+                padding-right: 20px;
+                h3 {
+                    font-size: 30px;
+                    font-weight: bolder;
+                    margin-bottom: 60px;
+                    span {
+                        color:$main-color
+                    }
+                }
+                form {
+                    input,textarea {
+                        border:none;
+                        outline: none;
+                        background-color: transparent;
+                        color: white;
+                        text-transform: none;
+                        &::placeholder {
+                            color: $light-gray;
+                            text-transform: capitalize;
+                        }
+                    }
+                    input.fullwidth {
+                        border: 1px solid $light-gray;
+                    }
+                    .fullwidth {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        padding: 15px 20px;
+                    }
+                    textarea {
+                        border-bottom: 1px solid $light-gray;
+                        min-height: 150px;
+                    }
+                    input[type="submit"] {
+                        background-color: $main-color;
+                        padding: 15px 20px;
+                        color: black;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        transition: 0.2s ease-in-out background-color;
+                        &:hover {
+                            background-color: $bg-main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//import responsive file
+@import "contactRes";

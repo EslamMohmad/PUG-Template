@@ -9,6 +9,7 @@
 $main-color:#ffb74d;
 $bg-main-color:#fcd54c;
 $gray-color:#fff;
+$light-gray:#ccc;
 
 body {
     overflow: hidden;
@@ -126,7 +127,6 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-top: 150px;
         }
         .slider {
             height: 100%;
@@ -180,38 +180,41 @@ body {
     // }
 }
 //global slick slide style
-.slick-list {
-    height: 100%;
-    width: 100%;
-    .slick-track {
-        display: flex;
+.slick-slider {
+    .slick-list {
         height: 100%;
-    }
-}
-.slick-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 25px 0;
-    li {
-        list-style: none;
-        width:13px;
-        height: 13px;
-        border-radius: 50%;
-        background-color: lightgray;
-        cursor: pointer;
-        transition: 0.2s ease-in-out background-color;
-        &:not(:last-child) {
-            margin-right: 10px;
-        }
-        button {
-            display: none;
+        width: 100%;
+        .slick-track {
+            display: flex;
+            height: 100%;
         }
     }
-    li.slick-active {
-        background-color: $main-color;
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 0;
+        li {
+            list-style: none;
+            width:13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: lightgray;
+            cursor: pointer;
+            transition: 0.2s ease-in-out background-color;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            button {
+                display: none;
+            }
+        }
+        li.slick-active {
+            background-color: $main-color;
+        }
     }
 }
+
 //some edit in bootstrap
 @media (max-width:1250px) {
     .parent {
@@ -227,21 +230,26 @@ body {
     }
     ::-webkit-scrollbar-track {
         background-color: #888;
-      }
-      ::-webkit-scrollbar-thumb {
+    }
+    ::-webkit-scrollbar-thumb {
         background-color: $main-color;
         transition:  0.2s ease-in-out background-color;
-      }
-      
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
         background-color: $bg-main-color;
-      }
+    }
       
     .parent-container {
         .scroll {
             overflow-y: scroll;
             display: block;
+        }
+        .parent {
+            .scrollable {
+                padding-top:150px;
+            }
         }
     }
 }
