@@ -1,9 +1,15 @@
 //switch between sections
 $(".point-container ul li").on("click", function () {
-    let sectionPostion = $("." + $(this).data("section")).offset().top;
-    $("html, body").animate({
-        scrollTop:sectionPostion
-    },"slow")
+    let sectionPostion = $("." + $(this).data("section"));
+    sectionPostion.addClass("active")
+    .siblings().removeClass("active")
+
+    $(this).addClass("active").siblings().removeClass("active")
+    if (sectionPostion.hasClass("txt-black")) {
+        $(".body-container").removeClass("txt-white")
+    } else {
+        $(".body-container").addClass("txt-white")
+    }
 })
 
 $(window).on("scroll", function () {
@@ -23,7 +29,7 @@ $(window).on("scroll", function () {
 })
 
 //import data file
-import myData from "./data/data.js";
+import "./data/data.js";
 
 //import sliders files
 import "./sliders.js";

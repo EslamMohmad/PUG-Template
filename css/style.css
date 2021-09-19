@@ -86,7 +86,7 @@ body {
   position: absolute;
   transform: rotate(-90deg) translateY(-50%);
   left: 20px;
-  top: 82%;
+  bottom: 140px;
 }
 .parent-container .parent .floting-txt span {
   text-transform: uppercase;
@@ -101,6 +101,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .parent-container .parent .slider {
   height: 100%;
@@ -145,6 +146,51 @@ body {
   width: 35%;
   color: lightgray;
   line-height: 2em;
+}
+.parent-container .parent.z-0 {
+  z-index: 0;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out transform;
+}
+.parent-container .parent.z-1 {
+  z-index: 1;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out transform;
+}
+.parent-container .parent.z-2 {
+  z-index: 2;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out transform;
+}
+.parent-container .parent.z-3 {
+  z-index: 3;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out transform;
+}
+.parent-container .parent.z-4 {
+  z-index: 4;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out transform;
+}
+.parent-container .parent.z-5 {
+  z-index: 5;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out transform;
+}
+.parent-container .parent.z-6 {
+  z-index: 6;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.5s ease-in-out transform;
+}
+.parent-container .parent.active {
+  transform: translateY(0);
 }
 
 .slick-slider .slick-list {
@@ -576,10 +622,6 @@ nav .icons {
   }
   .home .row hr {
     margin-top: 50px;
-  }
-
-  .parent-container .home.parent .floting-txt {
-    top: 78%;
   }
 }
 @media (max-width: 485px) {

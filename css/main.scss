@@ -112,7 +112,7 @@ body {
             position: absolute;
             transform: rotate(-90deg) translateY(-50%);
             left: 20px;
-            top:82%;
+            bottom:140px;
             span {
                 text-transform: uppercase;
                 font-size: 15px;
@@ -127,6 +127,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         .slider {
             height: 100%;
@@ -173,11 +174,17 @@ body {
             }
         }
     }
-    // @for $i from 0 through 6 {
-    //     .parent.z-#{$i} {
-    //         z-index: $i;
-    //     }
-    // }
+    @for $i from 0 through 6 {
+        .parent.z-#{$i} {
+            z-index: $i;
+            position: absolute;
+            transform: translateY(-100%);
+            transition: 0.5s ease-in-out transform;
+        }
+    }
+    .parent.active {
+        transform: translateY(0);
+    }
 }
 //global slick slide style
 .slick-slider {
