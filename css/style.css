@@ -391,9 +391,10 @@ nav.bg-active {
   left: 50px;
 }
 .bot-txt h3 {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: lighter;
   color: black;
+  letter-spacing: 1.5px;
 }
 
 .lung-section {
